@@ -3,11 +3,18 @@ import axios from 'axios';
 // axios instance 생성
 const api = axios.create({
   method: 'get',
-  url: 'https://api.themoviedb.org/3/',
-  params: {
-    api_key: '10923b261ba94d897ac6b81148314a3f',
-    language: 'en-US',
-  },
+  baseURL: 'https://api.themoviedb.org/3/',
+  // params: {
+  //   api_key: '10923b261ba94d897ac6b81148314a3f',
+  //   language: 'en-US',
+  // },
+});
+
+api.interceptors.request.use((config) => {
+  config.params = config.params || {};
+  config.params['api_key'] = '10923b261ba94d897ac6b81148314a3f';
+  config.params['language'] = 'en-US';
+  return config;
 });
 
 // movieApi 객체 생성
