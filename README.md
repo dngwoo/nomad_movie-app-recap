@@ -15,3 +15,10 @@
 - [v] Home.js
 - [v] Search.js
 - [v] TV.js
+
+## 2. 작업 순서 정하기
+
+- [v] Header.js
+- [v] api.js
+  <- movie(현재 상영작, 개봉예정작, 인기, 영화 세부내용, search)
+  <- tv(상위 등급, 인기, 금일 방송, 방송 세부내용, search)
