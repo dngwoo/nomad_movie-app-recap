@@ -28,6 +28,7 @@ const SLink = styled(Link)`
 
 export default withRouter((props) => (
   <List>
+    {console.log(props)}
     <Item current={props.location.pathname === '/'}>
       <SLink to="/">Home</SLink>
     </Item>
