@@ -32,7 +32,9 @@ export default withRouter(({ location: { pathname } }) => (
     {/* {console.log(pathname)} */}
     <List>
       <Item>
-        <SLink to="/">Movies</SLink>
+        <SLink to="/" current={pathname === '/' ? 1 : 0}>
+          Movies
+        </SLink>
       </Item>
       <Item>
         <SLink to="/tv" current={pathname === '/tv' ? 1 : 0}>
