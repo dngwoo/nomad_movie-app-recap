@@ -11,7 +11,7 @@
 
 ### Routes Directory
 
-- [] Detail.js <- Header.js 에 없음. 클릭하면 들어가지는 페이지.
-- [] Home.js
-- [] Search.js
-- [] TV.js
+- [v] Detail.js <- Header.js 에 없음. 클릭하면 들어가지는 페이지.
+- [v] Home.js
+- [v] Search.js
+- [v] TV.js
