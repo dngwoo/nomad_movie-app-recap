@@ -27,21 +27,31 @@
 
 3. HomeContainer.js, TVContainer.js
 
-   - [x] nowPlaying(), upcoming(), popular(), error, loading 값을 정의
-   - [x] 정의한 값을 HomePresenter.js에 넘겨줌
+### HomeContainer.js
 
-   - [x] topRated(), popular(), airingToday(), onTheAir(), error, loading 값을 정의
-   - [x] 정의한 값을 TVPresenter.js에 넘겨줌
+- [x] nowPlaying(), upcoming(), popular(), error, loading 값을 정의
+- [x] 정의한 값을 HomePresenter.js에 넘겨줌
+
+### TVContainer.js
+
+- [x] topRated(), popular(), airingToday(), onTheAir(), error, loading 값을 정의
+- [x] 정의한 값을 TVPresenter.js에 넘겨줌
 
 4. HomePresenter.js
 
-   - [x] 만들어야 되는 js파일들
-   - [x] Loader.js
-   - [x] Section.js
-   - [x] Poster.js
-   - [x] Message.js
+### 만들어야 되는 js파일들
 
-   - [x] 받아온 값들에서 필요한 것들만 추림.
-   - [x] nowPlaying() (title, poster_path, id, release_date, overview, vote_average)
-   - [x] upcoming() (title, poster_path, id, release_date, overview,vote_average)
-   - [x] popular() (title, poster_path, id, release_date, overview,vote_average)
+- [x] Loader.js
+- [x] Section.js
+- [x] Poster.js
+- [x] Message.js
+
+### 받아온 값들에서 필요한 것들만 추림.
+
+- [x] nowPlaying() (title, poster_path, id, release_date, overview, vote_average)
+- [x] upcoming() (title, poster_path, id, release_date, overview,vote_average)
+- [x] popular() (title, poster_path, id, release_date, overview,vote_average)
+
+### 따로 만들어서 줘야 하는 props
+
+- [x] Poster.js에게 isMovie라는 props를 줘야 된다. 클랙했을 경우 movie poster인지 tv poster인지 구분하기 위해서.
