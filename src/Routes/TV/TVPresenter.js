@@ -10,7 +10,7 @@ const Container = styled.div`
   padding: 20px;
 `;
 
-export default ({
+const TVPresenter = ({
   topRated,
   popular,
   airingToday,
@@ -22,7 +22,7 @@ export default ({
     <Loader />
   ) : (
     <Container>
-      <Section title='상위 프로그램'>
+      <Section title="상위 프로그램">
         {topRated &&
           topRated.length > 0 &&
           topRated.map((show) => (
@@ -33,10 +33,11 @@ export default ({
               title={show.name}
               rating={show.vote_average}
               year={show.first_air_date}
-              isMovie={false}></Poster>
+              isMovie={false}
+            ></Poster>
           ))}
       </Section>
-      <Section title='인기 프로그램'>
+      <Section title="인기 프로그램">
         {popular &&
           popular.length > 0 &&
           popular.map((show) => (
@@ -47,10 +48,11 @@ export default ({
               title={show.name}
               rating={show.vote_average}
               year={show.first_air_date}
-              isMovie={false}></Poster>
+              isMovie={false}
+            ></Poster>
           ))}
       </Section>
-      <Section title='금일 프로그램'>
+      <Section title="금일 프로그램">
         {airingToday &&
           airingToday.length > 0 &&
           airingToday.map((show) => (
@@ -61,10 +63,11 @@ export default ({
               title={show.name}
               rating={show.vote_average}
               year={show.first_air_date}
-              isMovie={false}></Poster>
+              isMovie={false}
+            ></Poster>
           ))}
       </Section>
-      <Section title='생방송'>
+      <Section title="생방송">
         {onTheAir &&
           onTheAir.length > 0 &&
           onTheAir.map((show) => (
@@ -75,10 +78,22 @@ export default ({
               title={show.name}
               rating={show.vote_average}
               year={show.first_air_date}
-              isMovie={false}></Poster>
+              isMovie={false}
+            ></Poster>
           ))}
       </Section>
-      {error && <Message text={error} color='#e74c3c' />}
+      {error && <Message text={error} color="#e74c3c" />}
     </Container>
   );
 };
+
+TVPresenter.propTypes = {
+  topRated: PropTypes.array,
+  popular: PropTypes.array,
+  airingToday: PropTypes.array,
+  onTheAir: PropTypes.array,
+  error: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
+};
+
+export default TVPresenter;

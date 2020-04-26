@@ -52,8 +52,14 @@ const Poster = ({ id, bgUrl, title, rating, year, isMovie }) => (
             bgUrl
               ? `https://image.tmdb.org/t/p/w300${bgUrl}`
               : require('assets/noPosterSmall.png')
-          }></Image>
-        <Rating>⭐️ {rating}/10</Rating>
+          }
+        ></Image>
+        <Rating>
+          <span role="img" aria-label="rating">
+            ⭐️
+          </span>{' '}
+          {rating}/10
+        </Rating>
       </ImageContainer>
       <Title>
         {title.length < 17 ? title : `${title.substring(0, 17)}...`}
@@ -72,8 +78,8 @@ Poster.propTypes = {
   isMovie: PropTypes.bool,
 };
 export default Poster;
-{
-  /* <a>
+
+/* <a>
   <div>
     <div>
         <span></span>
@@ -82,4 +88,3 @@ export default Poster;
     <span></span>
   </div>
 </a>; */
-}
