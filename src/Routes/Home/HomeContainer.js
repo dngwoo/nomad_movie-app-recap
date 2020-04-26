@@ -13,6 +13,7 @@ export default class extends React.Component {
   };
   async componentDidMount() {
     try {
+      throw Error;
       const {
         data: { results: nowPlaying },
       } = await moviesApi.nowPlaying();
