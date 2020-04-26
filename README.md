@@ -35,11 +35,13 @@
 
 4. HomePresenter.js
 
+   - [x] 만들어야 되는 js파일들
+   - [x] Loader.js
+   - [x] Section.js
+   - [x] Poster.js
+   - [x] Message.js
+
    - [x] 받아온 값들에서 필요한 것들만 추림.
    - [x] nowPlaying() (title, poster_path, id, release_date, overview, vote_average)
    - [x] upcoming() (title, poster_path, id, release_date, overview,vote_average)
    - [x] popular() (title, poster_path, id, release_date, overview,vote_average)
-
-5. 내일 아침에 해야 할 것
-   HomePresenter.js 꾸미기. 꾸며야 Detail로 넘어 갈 수 있음.
-   그리고 꾸며야 Search도 제대로 동작하는지 볼 수 있음.

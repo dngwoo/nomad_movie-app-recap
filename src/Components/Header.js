@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 const Header = styled.div`
   position: fixed;
+  background: #141414;
+  opacity: 0.8;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -32,17 +35,17 @@ export default withRouter(({ location: { pathname } }) => (
     {/* {console.log(pathname)} */}
     <List>
       <Item>
-        <SLink to="/" current={pathname === '/' ? 1 : 0}>
+        <SLink to='/' current={pathname === '/' ? 1 : 0}>
           Movies
         </SLink>
       </Item>
       <Item>
-        <SLink to="/tv" current={pathname === '/tv' ? 1 : 0}>
+        <SLink to='/tv' current={pathname === '/tv' ? 1 : 0}>
           TV
         </SLink>
       </Item>
       <Item>
-        <SLink to="/search" current={pathname === '/search' ? 1 : 0}>
+        <SLink to='/search' current={pathname === '/search' ? 1 : 0}>
           Search
         </SLink>
       </Item>
