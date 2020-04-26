@@ -29,7 +29,7 @@ export default class extends React.Component {
       });
     } catch {
       this.setState({
-        error: '영화 정보를 찾을 수 없습니다.',
+        error: '영화 정보를 받아 올 수 없습니다.',
       });
     } finally {
       this.setState({

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Link } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div``;
 
@@ -43,22 +43,34 @@ const Year = styled.span`
   opacity: 0.5;
 `;
 
-const Poster = ({ id, bgUrl, title, rating, year }) => (
-  <Container>
-    <ImageContainer>
-      <Image
-        bgUrl={
-          bgUrl
-            ? `https://image.tmdb.org/t/p/w300${bgUrl}`
-            : require('assets/noPosterSmall.png')
-        }></Image>
-      <Rating>⭐️ {rating}/10</Rating>
-    </ImageContainer>
-    <Title>{title.length < 17 ? title : `${title.substring(0, 17)}...`}</Title>
-    <Year>{year.substring(0, 4)}</Year>
-  </Container>
+const Poster = ({ id, bgUrl, title, rating, year, isMovie }) => (
+  <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
+    <Container>
+      <ImageContainer>
+        <Image
+          bgUrl={
+            bgUrl
+              ? `https://image.tmdb.org/t/p/w300${bgUrl}`
+              : require('assets/noPosterSmall.png')
+          }></Image>
+        <Rating>⭐️ {rating}/10</Rating>
+      </ImageContainer>
+      <Title>
+        {title.length < 17 ? title : `${title.substring(0, 17)}...`}
+      </Title>
+      <Year>{year.substring(0, 4)}</Year>
+    </Container>
+  </Link>
 );
 
+Poster.propTypes = {
+  id: PropTypes.number.isRequired,
+  imageUrl: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.number,
+  year: PropTypes.string,
+  isMovie: PropTypes.bool,
+};
 export default Poster;
 {
   /* <a>

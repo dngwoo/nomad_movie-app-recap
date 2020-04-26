@@ -25,6 +25,7 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
               title={movie.title}
               rating={movie.vote_average}
               year={movie.release_date}
+              isMovie={true}
             />
           ))}
         </Section>
@@ -39,6 +40,7 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
               title={movie.title}
               rating={movie.vote_average}
               year={movie.release_date}
+              isMovie={true}
             />
           ))}
           ))}
@@ -54,12 +56,21 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
               title={movie.title}
               rating={movie.vote_average}
               year={movie.release_date}
+              isMovie={true}
             />
           ))}
         </Section>
       )}
-      {error && <Message color='e74c3c' text={error} />}
+      {error && <Message color='#e74c3c' text={error} />}
     </Container>
   );
+
+HomePresenter.propTypes = {
+  nowPlaying: PropTypes.array,
+  popular: PropTypes.array,
+  upcoming: PropTypes.array,
+  loading: PropTypes.bool.isRequired,
+  error: PropTypes.string,
+};
 
 export default HomePresenter;
