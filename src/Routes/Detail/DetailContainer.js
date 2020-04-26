@@ -32,6 +32,7 @@ export default class extends React.Component {
     const { isMovie } = this.state;
     let result = null;
     try {
+      throw Error;
       if (isMovie) {
         // console.log(await moviesApi.movieDetail(parsedId));
         // adult, genres.name, original_title, overview,
@@ -56,6 +57,6 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    return <DetailPresenter result={result} erro={error} loading={loading} />;
+    return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
