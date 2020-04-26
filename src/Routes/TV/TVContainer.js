@@ -53,6 +53,7 @@ export default class extends React.Component {
       error,
       loading,
     } = this.state;
+    console.log(topRated, popular, airingToday, onTheAir, error, loading);
     return (
       <TVPresenter
         topRated={topRated}

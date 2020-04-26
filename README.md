@@ -55,3 +55,5 @@
    - 따로 만들어서 줘야 하는 props
 
      - [x] Poster.js에게 isMovie라는 props를 줘야 된다. 클랙했을 경우 movie poster인지 tv poster인지 구분하기 위해서.
+
+5. TVPresenter.js
